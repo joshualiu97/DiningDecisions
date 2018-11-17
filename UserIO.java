@@ -25,10 +25,6 @@ public class UserIO {
         sc.nextLine();
         System.out.println("Please answer the following questions to help us make the BEST decision for you :)");
         sc.nextLine();
-        getMood();
-        getHealthLevel();
-        getLoc();
-        takeout();
     }
     
     public int getMood()
