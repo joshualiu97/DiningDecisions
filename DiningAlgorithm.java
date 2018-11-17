@@ -128,6 +128,7 @@ public class DiningAlgorithm
 	{
 		//The index of the dining hall with the maximum points
 		int maxPointsI = 0;
+		calculatePoints();
 
 		for(int i = 0; i < halls.size(); i++)
 		{
