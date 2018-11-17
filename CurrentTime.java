@@ -4,7 +4,7 @@ public class CurrentTime {
 	private int currentTime;
 
 	public class CurrentTime(int currentTime){
-		this.currentTime() = retrieveCurrentTime(); 
+		this.currentTime = currentTime; 
 
 	}
 
@@ -15,7 +15,7 @@ public class CurrentTime {
         return t1;
    }
 
-   public String geturrentTime(){
-   		return currentTime();
+   public String getcurrentTime(){
+   		return currentTime;
    }
 }
