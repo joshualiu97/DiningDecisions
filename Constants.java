@@ -15,14 +15,14 @@ public class Constants
 
 	//Health levels
 	//Lower number = unhealthy, higher unmber = healthy
-	public static final int COVEL_HEALTH 		= 0;
-	public static final int DENEVE_HEALTH 		= 1;
-	public static final int BPLATE_HEALTH 		= 8;
-	public static final int FEAST_HEALTH 		= 5;
-	public static final int RENDE_HEALTH 		= 3;
-	public static final int CAFE19_HEALTH 		= 4;
-	public static final int BCAFE_HEALTH 		= 6;
-	public static final int STUDY_HEALTH 		= 7;
+	public static final int COVEL_HEALTH 		= 0; //0
+	public static final int DENEVE_HEALTH 		= 0; //1
+	public static final int BPLATE_HEALTH 		= 2; //7
+	public static final int FEAST_HEALTH 		= 1; //4
+	public static final int RENDE_HEALTH 		= 1; //2
+	public static final int CAFE19_HEALTH 		= 1; //3
+	public static final int BCAFE_HEALTH 		= 2; //5
+	public static final int STUDY_HEALTH 		= 2; //6
 
 	//Takeout or not
 	//true = is takeout, false = not takeout
@@ -37,12 +37,12 @@ public class Constants
 
 	//Mood
 	//higher number, what will make you feel the happiest
-	public static final int COVEL_MOOD 			= 7;
-	public static final int DENEVE_MOOD			= 5;
-	public static final int BPLATE_MOOD 		= 4;
-	public static final int FEAST_MOOD 			= 6;
-	public static final int RENDE_MOOD 			= 3;
-	public static final int CAFE19_MOOD 		= 2;
-	public static final int BCAFE_MOOD 			= 0;
-	public static final int STUDY_MOOD 			= 1;
+	public static final int COVEL_MOOD 			= 3; //7
+	public static final int DENEVE_MOOD			= 2; //5
+	public static final int BPLATE_MOOD 		= 2; //4
+	public static final int FEAST_MOOD 			= 3; //6
+	public static final int RENDE_MOOD 			= 1; //3
+	public static final int CAFE19_MOOD 		= 1; //2
+	public static final int BCAFE_MOOD 			= 0; //0
+	public static final int STUDY_MOOD 			= 0; //1
 }
