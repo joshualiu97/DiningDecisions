@@ -13,8 +13,7 @@ public class Online{
 	}
 
 	public bool checkOpen(int currentTime, int currentDay, String diningName){
-		//gets current time using CurrentTime
-		//checks if current time is in between getOpenTime() and getCloseTime()
+		
 		if (openTime <= currentTime && currentTime < closeTime) {
 			return true;
 		}
@@ -22,9 +21,8 @@ public class Online{
 		//returns true or false
 	}
 
-	public double retrieveCrowdLevel (String diningName){
-		//gets crowd level from API
-		//returs crowdlevel
+	public int retrieveCrowdLevel (String diningName){
+		
 	}
 
 	public String retrieveCurrentTime(){
