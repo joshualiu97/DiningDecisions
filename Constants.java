@@ -33,4 +33,12 @@ public class Constants
 	public static final boolean STUDY_TAKEOUT 	= true;
 
 	//Mood
+	public static final int COVEL_MOOD = 0;
+	public static final int DENEVE_MOOD = 0;
+	public static final int BPLATE_MOOD = 0;
+	public static final int FEAST_MOOD = 0;
+	public static final int RENDE_MOOD = 0;
+	public static final int CAFE19_MOOD = 0;
+	public static final int BCAFE_MOOD = 0;
+	public static final int STUDY_MOOD = 0;
 }
