@@ -2,9 +2,9 @@ import java.util.Arraylist;
 
 public class DiningAlgorithm
 {
-	private static MOOD_POINTS = 1;
-	private static HEALTH_POINTS = 1;
-	private static CROWD_POINTS = 1;
+	private static int MOOD_POINTS = 1;
+	private static int HEALTH_POINTS = 1;
+	private static int CROWD_POINTS = 1;
 
 	private int userMood;
 	private int userHealthLevel;
