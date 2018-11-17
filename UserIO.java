@@ -69,19 +69,19 @@ public class UserIO {
         String response = sc.nextLine().toLowerCase();
         if(response.equals("covel"))
         {
-            ans = 2;
+            ans = 0;
         }else if(response.equals("hedrick"))
         {
-            ans = 0;
+            ans = 1;
         }else if(response.equals("rieber"))
         {
-            ans = 1;
+            ans = 2;
         }else if(response.equals("de neve"))
         {
-            ans = 4;
+            ans = 3;
         }else if(response.equals("sproul"))
         {
-            ans = 3;
+            ans = 4;
         }else if(response.equals("campus"))
         {
             ans = 5;
