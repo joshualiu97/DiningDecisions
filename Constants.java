@@ -1,5 +1,8 @@
 public class Constants
 {
+	//Number of dining halls
+	public static final int NUM_DINING_HALLS	= 8;
+
 	//Dining hall names
 	public static final String COVEL_NAME 		= "Covel";
 	public static final String DENEVE_NAME		= "De Neve";
@@ -34,12 +37,12 @@ public class Constants
 
 	//Mood
 	//higher number, what will make you feel the happiest
-	public static final int COVEL_MOOD = 7;
-	public static final int DENEVE_MOOD = 6;
-	public static final int BPLATE_MOOD = 4;
-	public static final int FEAST_MOOD = 6;
-	public static final int RENDE_MOOD = 5;
-	public static final int CAFE19_MOOD = 5;
-	public static final int BCAFE_MOOD = 3;
-	public static final int STUDY_MOOD = 3;
+	public static final int COVEL_MOOD 			= 7;
+	public static final int DENEVE_MOOD			= 5;
+	public static final int BPLATE_MOOD 		= 4;
+	public static final int FEAST_MOOD 			= 6;
+	public static final int RENDE_MOOD 			= 3;
+	public static final int CAFE19_MOOD 		= 2;
+	public static final int BCAFE_MOOD 			= 0;
+	public static final int STUDY_MOOD 			= 1;
 }
