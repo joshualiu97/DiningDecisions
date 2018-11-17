@@ -2,10 +2,12 @@ import java.util.Arraylist;
 
 public class DiningAlgorithm
 {
-	private static MOOD_POINTS = 1;
-	private static HEALTH_POINTS = 1;
-	private static CROWD_POINTS = 1;
+	//The amount of points added to the point total if dining hall is compatible
+	private static int MOOD_POINTS = 1;
+	private static int HEALTH_POINTS = 1;
+	private static int CROWD_POINTS = 1;
 
+	//Local variables
 	private int userMood;
 	private int userHealthLevel;
 	private int location;
@@ -23,6 +25,7 @@ public class DiningAlgorithm
 	private DiningHall bcafe;
 	private DiningHall study;
 
+	//Arraylist of all the dining halls
 	private Arraylist<DiningHall> halls;
 
 	public DiningAlgorithm()
@@ -102,21 +105,36 @@ public class DiningAlgorithm
 			}
 
 			//Location calculations
-			if(location == 3)
-				continue;
+			if(location == 0) //if ur at covel
+				halls.get(i).addPoints(Constants.COVEL_LOC[i]);
+			else if(location == 1)
+				halls.get(i).addPoints(Constants.HEDRICK_LOC[i]);
+			else if(location == 2)
+				halls.get(i).addPoints(Constants.RIEBER_LOC[i]);
+			else if(location == 3)
+				halls.get(i).addPoints(Constants.DENEVE_LOC[i]);
+			else if(location == 4)
+				halls.get(i).addPoints(Constants.SPROUL_LOC[i]);
+			else if(location == 5)
+				halls.get(i).addPoints(Constants.CAMPUS_LOC[i]);
+			
+			
 		}
 	}
 
 	public String calculateDiningHall()
 	{
+		//The index of the dining hall with the maximum points
 		int maxPointsI = 0;
 
 		for(int i = 0; i < halls.size(); i++)
 		{
+			//If another dining hall has more points, set that to the maximum dining hall
 			if(halls.get(i).getPoints() > halls.get(maxPointsI).getPoints())
 				maxPointsI = i;
 		}
 
+		//Return the name of the dining hall with the most points
 		return halls.get(maxPointsI).getName();
 	}
 }

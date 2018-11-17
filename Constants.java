@@ -45,4 +45,13 @@ public class Constants
 	public static final int CAFE19_MOOD 		= 1; //2
 	public static final int BCAFE_MOOD 			= 0; //0
 	public static final int STUDY_MOOD 			= 0; //1
+
+	//location stats  
+	public static final int[] COVEL_LOC = [8,2,3,5,4,6,7,1]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] HEDRICK_LOC = [3,1,2,6,7,5,4,8]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] RIEVER_LOC = [3,1,2,7,8,5,4,6]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] DENEVE_LOC = [4,8,7,2,3,6,5,1]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] SPROUL_LOC = [5,4,8,2,3,6,7,1]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] CAMPUS_LOC = [5,8,7,2,3,4,6,1]; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+
 }
