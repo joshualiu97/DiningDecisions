@@ -105,8 +105,20 @@ public class DiningAlgorithm
 			}
 
 			//Location calculations
-			if(location == 3)
-				continue;
+			if(location == 0) //if ur at covel
+				halls.get(i).addPoints(Constants.COVEL_LOC[i]);
+			else if(location == 1)
+				halls.get(i).addPoints(Constants.HEDRICK_LOC[i]);
+			else if(location == 2)
+				halls.get(i).addPoints(Constants.RIEBER_LOC[i]);
+			else if(location == 3)
+				halls.get(i).addPoints(Constants.DENEVE_LOC[i]);
+			else if(location == 4)
+				halls.get(i).addPoints(Constants.SPROUL_LOC[i]);
+			else if(location == 5)
+				halls.get(i).addPoints(Constants.CAMPUS_LOC[i]);
+			
+			
 		}
 	}
 
