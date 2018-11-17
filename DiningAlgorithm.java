@@ -4,6 +4,7 @@ public class DiningAlgorithm
 {
 	private static MOOD_POINTS = 1;
 	private static HEALTH_POINTS = 1;
+	private static CROWD_POINTS = 1;
 
 	private int userMood;
 	private int userHealthLevel;
@@ -92,6 +93,13 @@ public class DiningAlgorithm
 				halls.get(i).addPoints(HEALTH_POINTS);
 
 			//Crowd calcualtions
+			if(!halls.get(i).isTakeout())
+			{
+				if(halls.get(i).getCrowdLevel() >= 70)
+					halls.get(i).addPoints(-CROWD_POINTS);
+				else if(halls.get(i).getCrowdLevel() <= 30)
+					halls.get(i).addPoints(CROWD_POINTS);
+			}
 
 			//Location calculations
 			if(location == 3)
