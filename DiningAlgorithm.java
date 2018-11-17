@@ -1,4 +1,4 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
 
 public class DiningAlgorithm
 {
@@ -26,7 +26,7 @@ public class DiningAlgorithm
 	private DiningHall study;
 
 	//Arraylist of all the dining halls
-	private Arraylist<DiningHall> halls;
+	private ArrayList<DiningHall> halls;
 
 	public DiningAlgorithm()
 	{
@@ -36,7 +36,7 @@ public class DiningAlgorithm
 		takeout = 0;
 		userIO = new UserIO();
 		online = new Online();
-		halls = new Arraylist<DiningHall>();
+		halls = new ArrayList<DiningHall>();
 
 		//Construct dining hall objects
 		covel = new DiningHall(Constants.COVEL_NAME, Constants.COVEL_MOOD, Constants.COVEL_TAKEOUT, Constants.HEALTH);

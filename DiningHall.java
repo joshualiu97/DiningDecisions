@@ -23,8 +23,8 @@ public class DiningHall {
 	{
 		online = new Online();
 
-		this.crowdLevel = getCrowdLevel(name);
-		this.isOpen = isOpen(name);
+		this.crowdLevel = online.retrieveCrowdLevel(name);
+		this.isOpen = online.isOpen(name);
 		points = 0;
 		this.moodRating = moodRating;
 		this.isTakeout = isTakeout;
