@@ -6,6 +6,7 @@ public class UserIO {
     private String loc_Question; 
     private String takeOut_Question; 
     private Scanner sc;
+    
     public UserIO()
     {
         sc = new Scanner(System.in); //scanner takes in user input
@@ -13,13 +14,28 @@ public class UserIO {
         health_Question = "How healthy are you feeling right now?"; //2
         loc_Question = "Where are you closest to right now?"; //3
         takeOut_Question = "Are you fine with eating at takeout places?"; //4
+        welcome();
     }
 
+    public void welcome()
+    {
+        System.out.println("Welcome to DiningDecisions!!(Click ENTER to continue)");
+        sc.nextLine();
+        System.out.println("We are here to help you make a decision on WHERE you should dine right now.");
+        sc.nextLine();
+        System.out.println("Please answer the following questions to help us make the BEST decision for you :)");
+        sc.nextLine();
+        getMood();
+        getHealthLevel();
+        getLoc();
+        takeout();
+    }
+    
     public int getMood()
     {
-        int ans = -1; //scale out of 10 of mood, 10 being happiest
+        int ans = -1; //scale out of 4 of mood, 4 being happiest
         System.out.println(mood_Question); //asks the question
-        String response = sc.nextLine().toLowerCase(); //take in the user input
+        String response = sc.nextLine().toLowerCase().trim(); //take in the user input
         if(response.equals("happy"))
         {
             ans = 3;
@@ -35,7 +51,7 @@ public class UserIO {
         }else
         {
             System.out.println("Please input a valid response again!");
-            getMood();
+            return getMood();
         }
         return ans; 
     }
@@ -57,7 +73,7 @@ public class UserIO {
         }else
         {
             System.out.println("Please input a valid response again!");
-            getHealthLevel();
+            return getHealthLevel();
         }
         return ans;
     }
@@ -66,7 +82,7 @@ public class UserIO {
     {
         int ans = 0;
         System.out.println(loc_Question);
-        String response = sc.nextLine().toLowerCase();
+        String response = sc.nextLine().toLowerCase().trim();
         if(response.equals("covel"))
         {
             ans = 0;
@@ -85,6 +101,10 @@ public class UserIO {
         }else if(response.equals("campus"))
         {
             ans = 5;
+        }else
+        {
+            System.out.println("Please input a valid response!");
+            return getLoc();
         }
         return ans;
     }
@@ -100,7 +120,7 @@ public class UserIO {
         }else if(response.equals("no"))
         {
             ans = 0;
-        }else if(response.equals("idk"))
+        }else
         {
             ans = 2;
         }
