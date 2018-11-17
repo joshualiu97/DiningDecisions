@@ -2,10 +2,12 @@ import java.util.Arraylist;
 
 public class DiningAlgorithm
 {
+	//The amount of points added to the point total if dining hall is compatible
 	private static int MOOD_POINTS = 1;
 	private static int HEALTH_POINTS = 1;
 	private static int CROWD_POINTS = 1;
 
+	//Local variables
 	private int userMood;
 	private int userHealthLevel;
 	private int location;
@@ -23,6 +25,7 @@ public class DiningAlgorithm
 	private DiningHall bcafe;
 	private DiningHall study;
 
+	//Arraylist of all the dining halls
 	private Arraylist<DiningHall> halls;
 
 	public DiningAlgorithm()
@@ -109,14 +112,17 @@ public class DiningAlgorithm
 
 	public String calculateDiningHall()
 	{
+		//The index of the dining hall with the maximum points
 		int maxPointsI = 0;
 
 		for(int i = 0; i < halls.size(); i++)
 		{
+			//If another dining hall has more points, set that to the maximum dining hall
 			if(halls.get(i).getPoints() > halls.get(maxPointsI).getPoints())
 				maxPointsI = i;
 		}
 
+		//Return the name of the dining hall with the most points
 		return halls.get(maxPointsI).getName();
 	}
 }
