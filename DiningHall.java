@@ -32,15 +32,15 @@ public class DiningHall {
 		this.name = name;
 	}
 
-	public double getcrowdLevel(){
+	public double getCrowdLevel(){
 		return crowdLevel;
 	}
 
-	public boolean getisOpen(){
+	public boolean isOpen(){
 		return isOpen;
 	}
 
-	public int getpoints(){
+	public int getPoints(){
 		return points;
 	}
 
