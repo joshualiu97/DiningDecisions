@@ -1,0 +1,32 @@
+DiningDecisions
+================
+main
+
+UserIO
+======
+int getMood()
+int getHealthLevel()
+int getLoc()
+int getHunger()
+int getTakeout()
+	- 0 = no, 1 = yes, 2 = idc
+void printDiningHall()
+
+Online
+======
+double getCrowdLevel()
+int getTime()
+int getHours()
+
+DiningAlgorithm
+===============
+void getData()
+string calculateDiningHall()
+	- Use point values to each dining hall and then the greatest point values
+
+Constants
+=========
+dining hall health levels
+dining hall string names
+dining hall takeout
+dining hall mood
