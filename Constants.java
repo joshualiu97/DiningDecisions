@@ -49,7 +49,7 @@ public class Constants
 	//location stats  
 	public static final int[] COVEL_LOC = new int[]{8,2,3,5,4,6,7,1}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
 	public static final int[] HEDRICK_LOC = new int[]{3,1,2,6,7,5,4,8}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
-	public static final int[] RIEVER_LOC = new int[]{3,1,2,7,8,5,4,6}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
+	public static final int[] RIEBER_LOC = new int[]{3,1,2,7,8,5,4,6}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
 	public static final int[] DENEVE_LOC = new int[]{4,8,7,2,3,6,5,1}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
 	public static final int[] SPROUL_LOC = new int[]{5,4,8,2,3,6,7,1}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick
 	public static final int[] CAMPUS_LOC = new int[]{5,8,7,2,3,4,6,1}; //covel, deneve, bplate, Feast, Rende, 1919, bcaf, Hedrick

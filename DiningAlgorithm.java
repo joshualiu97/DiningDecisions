@@ -39,14 +39,14 @@ public class DiningAlgorithm
 		halls = new ArrayList<DiningHall>();
 
 		//Construct dining hall objects
-		covel = new DiningHall(Constants.COVEL_NAME, Constants.COVEL_MOOD, Constants.COVEL_TAKEOUT, Constants.HEALTH);
-		deNeve = new DiningHall(Constants.DENEVE_NAME, Constants.DENEVE_MOOD, Constants.DENEVE_TAKEOUT, Constants.HEALTH);
-		bPlate = new DiningHall(Constants.BPLATE_NAME, Constants.BPLATE_MOOD, Constants.BPLATE_TAKEOUT, Constants.HEALTH);
-		feast = new DiningHall(Constants.FEAST_NAME, Constants.FEAST_MOOD, Constants.FEAST_TAKEOUT, Constants.HEALTH);
-		rende = new DiningHall(Constants.RENDE_NAME, Constants.RENDE_MOOD, Constants.RENDE_TAKEOUT, Constants.HEALTH);
-		cafe19 = new DiningHall(Constants.CAFE19_NAME, Constants.CAFE19_MOOD, Constants.CAFE19_TAKEOUT, Constants.HEALTH);
-		bcafe = new DiningHall(Constants.BCAFE_NAME, Constants.BCAFE_MOOD, Constants.BCAFE_TAKEOUT, Constants.HEALTH);
-		study = new DiningHall(Constants.STUDY_NAME, Constants.STUDY, Constants.STUDY_TAKEOUT, Constants.HEALTH);
+		covel = new DiningHall(Constants.COVEL_NAME, Constants.COVEL_MOOD, Constants.COVEL_TAKEOUT, Constants.COVEL_HEALTH);
+		deNeve = new DiningHall(Constants.DENEVE_NAME, Constants.DENEVE_MOOD, Constants.DENEVE_TAKEOUT, Constants.DENEVE_HEALTH);
+		bPlate = new DiningHall(Constants.BPLATE_NAME, Constants.BPLATE_MOOD, Constants.BPLATE_TAKEOUT, Constants.BPLATE_HEALTH);
+		feast = new DiningHall(Constants.FEAST_NAME, Constants.FEAST_MOOD, Constants.FEAST_TAKEOUT, Constants.FEAST_HEALTH);
+		rende = new DiningHall(Constants.RENDE_NAME, Constants.RENDE_MOOD, Constants.RENDE_TAKEOUT, Constants.RENDE_HEALTH);
+		cafe19 = new DiningHall(Constants.CAFE19_NAME, Constants.CAFE19_MOOD, Constants.CAFE19_TAKEOUT, Constants.CAFE19_HEALTH);
+		bcafe = new DiningHall(Constants.BCAFE_NAME, Constants.BCAFE_MOOD, Constants.BCAFE_TAKEOUT, Constants.BCAFE_HEALTH);
+		study = new DiningHall(Constants.STUDY_NAME, Constants.STUDY_MOOD, Constants.STUDY_TAKEOUT, Constants.STUDY_HEALTH);
 
 		//Add dining halls into the ArrayList
 		halls.add(covel);
@@ -64,17 +64,19 @@ public class DiningAlgorithm
 		userMood = userIO.getMood();
 		userHealthLevel = userIO.getHealthLevel();
 		location = userIO.getLoc();
-		takeout = userIO.getTakeout();
+		takeout = userIO.takeout();
 	}
 
 	private void calculatePoints()
 	{
+		getData();
+
 		for(int i = 0; i < halls.size(); i++)
 		{
 			//Takeout calculations
 			if(takeout == 0 && halls.get(i).isTakeout() || takeout == 1 && !halls.get(i).isTakeout())
 			{
-				halls.pop(i);
+				halls.remove(i);
 				i--;
 				continue;
 			}
@@ -82,7 +84,7 @@ public class DiningAlgorithm
 			//isOpen
 			else if(!halls.get(i).isOpen())
 			{
-				halls.pop(i);
+				halls.remove(i);
 				i--;
 				continue;
 			}
