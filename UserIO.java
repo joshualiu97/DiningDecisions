@@ -4,12 +4,11 @@ public class UserIO {
 	private String mood_Question;
 	private String health_Question; 
 	private String loc_Question; 
-	private String hunger_Question; 
 	private String takeOut_Question; 
 	private Scanner sc;
 	public UserIO()
 	{
-		sc = new Scanner(System.in);
+		sc = new Scanner(System.in); //scanner takes in user input
 		mood_Question = "What mood are you in right now?"; //1
 		health_Question = "How healthy are you feeling right now?"; //2
 		loc_Question = "Where are you closest to right now?"; //3
@@ -78,6 +77,24 @@ public class UserIO {
 		}else if(response.equals("campus"))
 		{
 			ans = 5;
+		}
+		return ans;
+	}
+
+	public int takeout()
+	{
+		int ans = 0;
+		System.out.println(takeOut_Question);
+		String response = sc.nextLine();
+		if(response.equals("yes"))
+		{
+			ans = 1;
+		}else if(response.equals("no"))
+		{
+			ans = 0;
+		}else if(response.equals("idk"))
+		{
+			ans = 2;
 		}
 		return ans;
 	}
