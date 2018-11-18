@@ -130,28 +130,36 @@ public class Online{
         return false;
     }
 
-	public int getCrowdLevel (String diningName) throws Exception {
-        String url = "https://api.bruin-bite.com/api/v1/menu/ActivityLevels/";
-
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-        // optional default is GET
-        con.setRequestMethod("GET");
-        int responseCode = con.getResponseCode();
-        //System.out.println("\nSending 'GET' request to URL : " + url);
-        //System.out.println("Response Code : " + responseCode);
-
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(con.getInputStream()));
+	public int getCrowdLevel (String diningName) {
         String inputLine;
         StringBuffer response = new StringBuffer();
 
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
-        }
-        in.close();
+        try
+        {
+            String url = "https://api.bruin-bite.com/api/v1/menu/ActivityLevels/";
 
+            URL obj = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+            // optional default is GET
+            con.setRequestMethod("GET");
+            int responseCode = con.getResponseCode();
+            //System.out.println("\nSending 'GET' request to URL : " + url);
+            //System.out.println("Response Code : " + responseCode);
+
+            BufferedReader in = new BufferedReader(
+            new InputStreamReader(con.getInputStream()));
+
+            while ((inputLine = in.readLine()) != null)
+            {
+                response.append(inputLine);
+            }
+            in.close();
+        } catch (Exception e)
+        {
+            System.out.println("Could not get response from website.");
+        }
+        
         //print result
         String allActivityLevels = response.toString();
         //System.out.println(allActivityLevels);
@@ -235,12 +243,12 @@ public class Online{
         return 0;
 	}
 
-	public static int getCurrentTime(){
+	public int getCurrentTime(){
         Date date = new Date();
         String time = date.toString();
         String t1 = time.substring(11,13) + time.substring(14,16);
         int time1 = Integer.parseInt(t1);
-        return time;
+        return time1;
     }
 
     public int getCurrentDay() {

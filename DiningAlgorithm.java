@@ -56,6 +56,35 @@ public class DiningAlgorithm
 		halls.add(bcafe);
 		halls.add(study);
 	}
+	public DiningAlgorithm()
+	{
+		this.userMood = 0;
+		this.userHealthLevel = 0;
+		this.location = 0;
+		this.takeout = 0;
+		online = new Online();
+		halls = new ArrayList<DiningHall>();
+
+		//Construct dining hall objects
+		covel = new DiningHall(Constants.COVEL_NAME, Constants.COVEL_MOOD, Constants.COVEL_TAKEOUT, Constants.COVEL_HEALTH);
+		deNeve = new DiningHall(Constants.DENEVE_NAME, Constants.DENEVE_MOOD, Constants.DENEVE_TAKEOUT, Constants.DENEVE_HEALTH);
+		bPlate = new DiningHall(Constants.BPLATE_NAME, Constants.BPLATE_MOOD, Constants.BPLATE_TAKEOUT, Constants.BPLATE_HEALTH);
+		feast = new DiningHall(Constants.FEAST_NAME, Constants.FEAST_MOOD, Constants.FEAST_TAKEOUT, Constants.FEAST_HEALTH);
+		rende = new DiningHall(Constants.RENDE_NAME, Constants.RENDE_MOOD, Constants.RENDE_TAKEOUT, Constants.RENDE_HEALTH);
+		cafe19 = new DiningHall(Constants.CAFE19_NAME, Constants.CAFE19_MOOD, Constants.CAFE19_TAKEOUT, Constants.CAFE19_HEALTH);
+		bcafe = new DiningHall(Constants.BCAFE_NAME, Constants.BCAFE_MOOD, Constants.BCAFE_TAKEOUT, Constants.BCAFE_HEALTH);
+		study = new DiningHall(Constants.STUDY_NAME, Constants.STUDY_MOOD, Constants.STUDY_TAKEOUT, Constants.STUDY_HEALTH);
+
+		//Add dining halls into the ArrayList
+		halls.add(covel);
+		halls.add(deNeve);
+		halls.add(bPlate);
+		halls.add(feast);
+		halls.add(rende);
+		halls.add(cafe19);
+		halls.add(bcafe);
+		halls.add(study);
+	}
 
 	private void calculatePoints()
 	{

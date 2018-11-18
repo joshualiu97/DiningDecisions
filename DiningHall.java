@@ -25,7 +25,7 @@ public class DiningHall {
 	{
 		online = new Online();
 
-		this.crowdLevel = online.retrieveCrowdLevel(name);
+		this.crowdLevel = online.getCrowdLevel(name);
 		this.isOpen = online.isOpen(name);
 		points = 0;
 		this.moodRating = moodRating;
@@ -38,10 +38,10 @@ public class DiningHall {
 		online = new Online();
 
 		this.crowdLevel = 0;			
-		this.isOpen = 0;
+		this.isOpen = false;
 		this.points = 0;
 		this.moodRating = 0;
-		this.isTakeout = 0;
+		this.isTakeout = false;
 		this.healthRating = 0;
 		this.name = " ";
 	}
@@ -58,7 +58,7 @@ public class DiningHall {
 		return points;
 	}
 
-	public int addPoints(int add){
+	public void addPoints(int add){
 		points += add;
 	}
 
