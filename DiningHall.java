@@ -3,8 +3,8 @@ public class DiningHall {
 	private double crowdLevel;
 	private boolean isOpen;
 	private boolean isTakeout;
-	private int moodRating;
-	private int healthRating;
+	private static int moodRating;
+	private static int healthRating;
 	private int points;
 	private String name;
 
@@ -21,7 +21,7 @@ public class DiningHall {
 		this.healthRating = healthRating;
 		this.name = name;
 	}
-	public DiningHall(String name, int moodRating, boolean isTakeout, int helathRating)
+	public DiningHall(String name, int moodRating, boolean isTakeout, int healthRating)
 	{
 		online = new Online();
 
