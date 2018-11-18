@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 public class UserIO3 {
     private String mood_Question;
@@ -7,6 +8,15 @@ public class UserIO3 {
     private String loc_Question; 
     private String takeOut_Question; 
     private Scanner sc;
+
+    private static ImageIcon rendeImage = new ImageIcon("Pictures/rendezvous.jpg");
+    private static ImageIcon bCafeImage = new ImageIcon("Pictures/bcafe.jpg");
+    private static ImageIcon cafe1919Image = new ImageIcon("Pictures/cafe1919.jpg");
+    private static ImageIcon covelImage = new ImageIcon("Pictures/covel.jpg");
+    private static ImageIcon bPlateImage = new ImageIcon("Pictures/bplate.jpg");
+    private static ImageIcon deneveImage = new ImageIcon("Pictures/deneve.jpg");
+    private static ImageIcon feastImage = new ImageIcon("Pictures/feast.jpg");
+    private static ImageIcon studyImage = new ImageIcon("Pictures/study.jpg");
 
     private DiningAlgorithm diningAlgorithm;
     
@@ -135,7 +145,30 @@ public class UserIO3 {
 
     public void printDiningHall()
     {
-        //System.out.println("You should go to " + diningAlgorithm.calculateDiningHall());
-        JOptionPane.showMessageDialog(null,"You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!");
+        if(diningAlgorithm.calculateDiningHall().equals(Constants.COVEL_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, covelImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.STUDY_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, studyImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.BPLATE_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, bPlateImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.DENEVE_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, deneveImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.FEAST_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, feastImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.CAFE19_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, cafe1919Image);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.RENDE_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, rendeImage);
+        } else if(diningAlgorithm.calculateDiningHall().equals(Constants.BCAFE_NAME))
+        {
+            JOptionPane.showMessageDialog(null,"", "You should go to " + diningAlgorithm.calculateDiningHall()+"!!!!", JOptionPane.INFORMATION_MESSAGE, bCafeImage);
+        }
     }
 }
