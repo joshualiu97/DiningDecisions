@@ -11,7 +11,6 @@ public class UserIO {
     
     public UserIO()
     {
-    	System.out.println("Test");
     	diningAlgorithm = new DiningAlgorithm();
 
         sc = new Scanner(System.in); //scanner takes in user input
