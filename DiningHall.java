@@ -11,6 +11,8 @@ public class DiningHall {
 	private Online online;
 
 	public DiningHall(String name, int crowdLevel, boolean isOpen, int moodRating, boolean isTakeout, int healthRating){
+		online = new Online();
+
 		this.crowdLevel = crowdLevel;			
 		this.isOpen = isOpen;
 		this.points = 0;
@@ -30,6 +32,18 @@ public class DiningHall {
 		this.isTakeout = isTakeout;
 		this.healthRating = healthRating;
 		this.name = name;
+	}
+	public DiningHall()
+	{
+		online = new Online();
+
+		this.crowdLevel = 0;			
+		this.isOpen = 0;
+		this.points = 0;
+		this.moodRating = 0;
+		this.isTakeout = 0;
+		this.healthRating = 0;
+		this.name = " ";
 	}
 
 	public double getCrowdLevel(){

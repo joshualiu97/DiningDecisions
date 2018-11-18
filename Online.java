@@ -19,7 +19,7 @@ public class Online{
 		this.currentDay = getCurrentDay();
 	}
 
-	public static boolean isOpen(String diningName){
+	public boolean isOpen(String diningName){
         switch (currentDay){
             case 2 :
             case 3 :

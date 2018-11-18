@@ -13,7 +13,6 @@ public class DiningAlgorithm
 	private int location;
 	private int takeout;
 
-	private UserIO userIO;
 	private Online online;
 
 	private DiningHall covel;
