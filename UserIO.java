@@ -15,7 +15,7 @@ public class UserIO {
         mood_Question = "What mood are you in right now? Choose between happy/alright/meh/depressed."; //1
         health_Question = "How healthy are you feeling right now? Choose between healthy/don't care/unhealthy."; //2
         loc_Question = "Where are you closest to right now? Choose between Covel, Sproul, Hedrick, De Neve, Rieber, Campus."; //3
-        takeOut_Question = "Are you fine with eating at takeout places? Yes/No"; //4
+        takeOut_Question = "Are you fine with eating at takeout places? Yes/No/idc"; //4
         welcome();
 
        	diningAlgorithm = new DiningAlgorithm(getMood(), getHealthLevel(), getLoc(), takeout());
@@ -120,7 +120,7 @@ public class UserIO {
         }else if(response.equals("no"))
         {
             ans = 0;
-        }else
+        }else if(response.equals("idc"))
         {
             ans = 2;
         }
