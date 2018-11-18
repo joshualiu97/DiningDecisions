@@ -14,14 +14,12 @@ public class Online{
 	private int currentDay;
 	private int crowdLevel;
 
-	public Online(int currentTime, int currentDay, int crowdLevel) {
-		this.currentTime = currentTime;
-		this.currentDay = currentDay;
-		this.crowdLevel = crowdLevel;
-
+	public Online() {
+		this.currentTime = retrieveCurrentTime();
+		this.currentDay = retrieveCurrentDay();
 	}
 
-	public static boolean checkIsOpen(int currentTime, int currentDay, String diningName){
+	public static boolean isOpen(String diningName){
         switch (currentDay){
             case 2 :
             case 3 :
@@ -132,7 +130,7 @@ public class Online{
         return false;
     }
 
-	public int retrieveCrowdLevel (String diningName) throws Exception {
+	public int getCrowdLevel (String diningName) throws Exception {
         String url = "https://api.bruin-bite.com/api/v1/menu/ActivityLevels/";
 
         URL obj = new URL(url);
@@ -245,7 +243,7 @@ public class Online{
         return time;
    }
 
-   public int retrieveCurrentDay() {
+   public int getCurrentDay() {
  
         Date now = new Date();
  
@@ -261,18 +259,4 @@ public class Online{
         //System.out.println(day); // the day of the week in numerical format
         return day;
     }
-
-   public int getCurrentTime(){
-   		return currentTime;
-   }
-
-   public int getCurrentDay(){
-   		return currentDay;
-
-   }
-
-   public int getCrowdLevel(){
-   		return crowdLevel;
-   }
-
 }
