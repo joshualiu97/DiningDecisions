@@ -1,4 +1,11 @@
 import java.util.Date;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+
 public class Online{
  
 	private int currentTime;
@@ -123,8 +130,110 @@ public class Online{
     return false;
     }
 
-	public int retrieveCrowdLevel (String diningName){
-		
+	public int retrieveCrowdLevel (String diningName) throws Exception {
+
+  String url = "https://api.bruin-bite.com/api/v1/menu/ActivityLevels/";
+
+  URL obj = new URL(url);
+  HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+  // optional default is GET
+  con.setRequestMethod("GET");
+
+  int responseCode = con.getResponseCode();
+  //System.out.println("\nSending 'GET' request to URL : " + url);
+  //System.out.println("Response Code : " + responseCode);
+
+  BufferedReader in = new BufferedReader(
+  new InputStreamReader(con.getInputStream()));
+  String inputLine;
+  StringBuffer response = new StringBuffer();
+
+  while ((inputLine = in.readLine()) != null) {
+      response.append(inputLine);
+  }
+  in.close();
+
+  //print result
+  String allActivityLevels = response.toString();
+  //System.out.println(allActivityLevels);
+
+  // Covel Activity Level
+  int covelIndex = allActivityLevels.indexOf("\"Covel\": ");
+  int i = 0;
+  while (Character.isDigit(allActivityLevels.charAt(covelIndex + 10 + i))) {
+      i++;
+  }
+  String covelActivityLevel;
+  if (i == 0) {
+       covelActivityLevel = "-1";
+  }
+  else {
+      covelActivityLevel = allActivityLevels.substring(covelIndex + 10,covelIndex + 10 + i);
+  }
+  int covel = Integer.parseInt(covelActivityLevel);
+  //System.out.println(covel);
+
+  // De Neve Activty Level
+  int deNeveIndex = allActivityLevels.indexOf("\"De Neve\": ");
+  int j = 0;
+  while (Character.isDigit(allActivityLevels.charAt(deNeveIndex + 12 + j))) {
+      j++;
+  }
+  String deNeveActivityLevel;
+  if (j == 0) {
+       deNeveActivityLevel = "-1";
+  }
+  else {
+      deNeveActivityLevel = allActivityLevels.substring(deNeveIndex + 12,deNeveIndex + 12 + j);
+  }
+  int deNeve = Integer.parseInt(deNeveActivityLevel);
+  //System.out.println(deNeve);
+
+  // Bruin Plate Activty Level
+  int bPlateIndex = allActivityLevels.indexOf("\"Bruin Plate\": ");
+  int k = 0;
+  while (Character.isDigit(allActivityLevels.charAt(bPlateIndex + 16 + k))) {
+      k++;
+  }
+  String bPlateActivityLevel;
+  if (k == 0) {
+       bPlateActivityLevel = "-1";
+  }
+  else {
+      bPlateActivityLevel = allActivityLevels.substring(bPlateIndex + 16,bPlateIndex + 16 + k);
+  }
+  int bPlate = Integer.parseInt(bPlateActivityLevel);
+  //System.out.println(bPlate);
+
+  // Feast Activity Level
+  int feastIndex = allActivityLevels.indexOf("\"FEAST at Rieber\": ");
+  int l = 0;
+  while (Character.isDigit(allActivityLevels.charAt(feastIndex + 20 + l))) {
+      l++;
+  }
+  String feastActivityLevel;
+  if (l == 0) {
+       feastActivityLevel = "-1";
+  }
+  else {
+      feastActivityLevel = allActivityLevels.substring(feastIndex + 20,feastIndex + 20 + l);
+  }
+  int feast = Integer.parseInt(feastActivityLevel);
+  //System.out.println(feast);
+
+  if (diningName == COVEL_NAME) {
+    return covel;
+  }
+  if (diningName == DENEVE_NAME) {
+    return deNeve;
+  }
+  if (diningName == BPLATE_NAME) {
+    return bPlate;
+  }
+  if (diningName == FEAST_NAME) {
+    return feast;
+  }
 	}
 
 	public String retrieveCurrentTime(){
