@@ -12,14 +12,116 @@ public class Online{
 
 	}
 
-	public bool checkOpen(int currentTime, int currentDay, String diningName){
-		
-		if (openTime <= currentTime && currentTime < closeTime) {
-			return true;
-		}
-		return false; 
-		//returns true or false
-	}
+	public static boolean checkIsOpen(int currentTime, int currentDay, String diningName){
+        switch (currentDay){
+            case 2 :
+            case 3 :
+            case 4 :
+            case 5 :
+            case 6 :
+                if (diningName.equals(COVEL_NAME)){
+                    if ((currentTime >= 1200 && currentTime < 1500) || (currentTime >= 1700 && currentTime < 2100)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(DENEVE_NAME)){
+                    if ((currentTime >= 700 && currentTime < 1000) || (currentTime >= 1100 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000)){
+                        return true;
+                    } else if ((currentTime >= 2100 && currentTime <= 2359) || (currentTime >= 0 && currentTime <= 100)){
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(BPLATE_NAME)){
+                    if ((currentTime >= 700 && currentTime < 900) || (currentTime >= 1100 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(FEAST_NAME)) {
+                    if ((currentTime >= 1000 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000)) {
+                        return true;
+                    } else {
+                        return false; 
+                    }
+                } else if (diningName.equals(RENDE_NAME)) {
+                    if ((currentTime >= 700 && currentTime < 1030) || (currentTime >= 1130 && currentTime < 1600) || (currentTime >= 1700 && currentTime < 2359)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(CAFE19_NAME)) {
+                    if ((currentTime >= 1100 && currentTime < 2359)) {
+                        return true;
+                    } else {
+                        return false; 
+                    }
+                } else if (diningName.equals(BCAFE_NAME)) {
+                    if ((currentTime >= 700 && currentTime <= 2359)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(STUDY_NAME)) {
+                    if ((currentTime >= 1100 && currentTime < 430) ){
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                break;
+            case 1 :
+            case 7 :
+                if (diningName.equals(COVEL_NAME)){
+                    if ((currentTime >= 930 && currentTime < 1500) || (currentTime >= 1700 && currentTime < 900)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(DENEVE_NAME)){
+                    if ((currentTime >= 700 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000) ){
+                        return true;
+                    } else if ((currentTime >= 2100 && currentTime < 2359) || (currentTime >= 0000 && currentTime < 100)){
+                        return true;
+                    }else {
+                        return false;
+                    }
+                } else if (diningName.equals(BPLATE_NAME)){
+                    if ((currentTime >= 1000 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(FEAST_NAME)) {
+                    return false;
+                } else if (diningName.equals(RENDE_NAME)) {
+                    if ((currentTime >= 1000 && currentTime < 1400) || (currentTime >= 1700 && currentTime < 2000)) {
+                        return true;
+                    } else {
+                        return false; 
+                    }
+                } else if (diningName.equals(CAFE19_NAME)) {
+                    return false;
+                } else if (diningName.equals(BCAFE_NAME)) {
+                    if ((currentTime >= 1600 && currentTime < 2100)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (diningName.equals(STUDY_NAME)) {
+                    if ((currentTime >= 1100 && currentTime < 1630) || (currentTime >= 1700 && currentTime < 2100)){
+                        return true;
+                    } else if ((currentTime >= 2100 && currentTime < 2359) || (currentTime >= 0 && currentTime < 200)) {
+                        return true;
+                    }else {
+                        return false;
+                    }
+                }
+                break;
+        }
+    return false;
+    }
 
 	public int retrieveCrowdLevel (String diningName){
 		
