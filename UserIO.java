@@ -125,6 +125,6 @@ public class UserIO {
 
     public void printDiningHall()
     {
-        //System.out.println("You should go to " + DiningAlgorithm.calculateDiningHall());
+        System.out.println("You should go to " + DiningAlgorithm.calculateDiningHall());
     }
 }
