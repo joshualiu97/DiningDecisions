@@ -12,10 +12,10 @@ public class UserIO {
     public UserIO()
     {
         sc = new Scanner(System.in); //scanner takes in user input
-        mood_Question = "What mood are you in right now?"; //1
-        health_Question = "How healthy are you feeling right now?"; //2
-        loc_Question = "Where are you closest to right now?"; //3
-        takeOut_Question = "Are you fine with eating at takeout places?"; //4
+        mood_Question = "What mood are you in right now? Choose between happy/alright/meh/depressed."; //1
+        health_Question = "How healthy are you feeling right now? Choose between healthy/don't care/unhealthy."; //2
+        loc_Question = "Where are you closest to right now? Choose between Covel, Sproul, Hedrick, De Neve, Rieber, Campus."; //3
+        takeOut_Question = "Are you fine with eating at takeout places? Yes/No"; //4
         welcome();
 
        	diningAlgorithm = new DiningAlgorithm(getMood(), getHealthLevel(), getLoc(), takeout());
