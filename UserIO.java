@@ -6,9 +6,13 @@ public class UserIO {
     private String loc_Question; 
     private String takeOut_Question; 
     private Scanner sc;
+
+    private DiningAlgorithm diningAlgorithm;
     
     public UserIO()
     {
+    	diningAlgorithm = new DiningAlgorithm();
+
         sc = new Scanner(System.in); //scanner takes in user input
         mood_Question = "What mood are you in right now?"; //1
         health_Question = "How healthy are you feeling right now?"; //2
@@ -125,6 +129,6 @@ public class UserIO {
 
     public void printDiningHall()
     {
-        System.out.println("You should go to " + DiningAlgorithm.calculateDiningHall());
+        System.out.println("You should go to " + diningAlgorithm.calculateDiningHall());
     }
 }
