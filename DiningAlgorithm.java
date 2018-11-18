@@ -150,7 +150,7 @@ public class DiningAlgorithm
 		for(int i = 0; i < halls.size(); i++)
 		{
 			//If another dining hall has more points, set that to the maximum dining hall
-			System.out.println(halls.get(i).getName() + "'s Score: " + halls.get(i).getPoints())
+			System.out.println(halls.get(i).getName() + "'s Score: " + halls.get(i).getPoints());
 			if(halls.get(i).getPoints() > halls.get(maxPointsI).getPoints())
 				maxPointsI = i;
 		}
