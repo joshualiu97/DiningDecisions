@@ -91,8 +91,10 @@ public class DiningAlgorithm
 		for(int i = 0; i < halls.size(); i++)
 		{
 			//Takeout calculations
+			System.out.println("iteration " + i);
 			if(takeout == 0 && halls.get(i).isTakeout() || takeout == 1 && !halls.get(i).isTakeout())
 			{
+				System.out.println("removed hall num due to takeout" + i);
 				halls.remove(i);
 				i--;
 				continue;
@@ -101,22 +103,29 @@ public class DiningAlgorithm
 			//isOpen
 			else if(!halls.get(i).isOpen())
 			{
+				System.out.println("removed hall num due to closed" + i);
 				halls.remove(i);
 				i--;
 				continue;
 			}
 
 			//Mood calculations
-			if(halls.get(i).getMoodRating() == userMood)
+			System.out.println("MOOD Dining num:" + i + " " + halls.get(i).getMoodRating());
+			System.out.println(userMood);
+			if(halls.get(i).getMoodRating() == userMood) {
 				halls.get(i).addPoints(MOOD_POINTS);
-
+			}
 			//Health calculations
+			System.out.println("HEALTH Dining num:" + i + " " + halls.get(i).getHealthRating());
+			System.out.println(userHealthLevel);
 			if(halls.get(i).getHealthRating() == userHealthLevel)
+				System.out.println("health hall "+i);
 				halls.get(i).addPoints(HEALTH_POINTS);
 
 			//Crowd calcualtions
 			if(!halls.get(i).isTakeout())
 			{
+				System.out.println("Crowd Level: "+"num:"+i+" "+halls.get(i).getCrowdLevel());
 				if(halls.get(i).getCrowdLevel() >= 70)
 					halls.get(i).addPoints(-CROWD_POINTS);
 				else if(halls.get(i).getCrowdLevel() <= 30)
