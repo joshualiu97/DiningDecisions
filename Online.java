@@ -1,4 +1,3 @@
-package dining.decisions;
 import java.util.Date;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
