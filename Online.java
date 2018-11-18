@@ -237,11 +237,12 @@ public class Online{
         return 0;
 	}
 
-	public String retrieveCurrentTime(){
+	public static int retrieveCurrentTime(){
         Date date = new Date();
         String time = date.toString();
         String t1 = time.substring(11,13) + time.substring(14,16);
-        return t1;
+        int time1 = Integer.parseInt(t1);
+        return time;
    }
 
    public int retrieveCurrentDay() {
