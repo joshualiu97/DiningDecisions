@@ -15,8 +15,8 @@ public class Online{
 	private int crowdLevel;
 
 	public Online() {
-		this.currentTime = retrieveCurrentTime();
-		this.currentDay = retrieveCurrentDay();
+		this.currentTime = getCurrentTime();
+		this.currentDay = getCurrentDay();
 	}
 
 	public static boolean isOpen(String diningName){
@@ -235,15 +235,15 @@ public class Online{
         return 0;
 	}
 
-	public static int retrieveCurrentTime(){
+	public static int getCurrentTime(){
         Date date = new Date();
         String time = date.toString();
         String t1 = time.substring(11,13) + time.substring(14,16);
         int time1 = Integer.parseInt(t1);
         return time;
-   }
+    }
 
-   public int getCurrentDay() {
+    public int getCurrentDay() {
  
         Date now = new Date();
  

@@ -28,13 +28,12 @@ public class DiningAlgorithm
 	//Arraylist of all the dining halls
 	private ArrayList<DiningHall> halls;
 
-	public DiningAlgorithm()
+	public DiningAlgorithm(int userMood, int userHealthLevel, int location, int takeout)
 	{
-		userMood = 0;
-		userHealthLevel = 0;
-		location = 0;
-		takeout = 0;
-		userIO = new UserIO();
+		this.userMood = userMood;
+		this.userHealthLevel = userHealthLevel;
+		this.location = location;
+		this.takeout = takeout;
 		online = new Online();
 		halls = new ArrayList<DiningHall>();
 
@@ -59,18 +58,8 @@ public class DiningAlgorithm
 		halls.add(study);
 	}
 
-	private void getData()
-	{
-		userMood = userIO.getMood();
-		userHealthLevel = userIO.getHealthLevel();
-		location = userIO.getLoc();
-		takeout = userIO.takeout();
-	}
-
 	private void calculatePoints()
 	{
-		getData();
-
 		for(int i = 0; i < halls.size(); i++)
 		{
 			//Takeout calculations
