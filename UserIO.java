@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class UserIO {
     private String mood_Question;
@@ -16,7 +17,7 @@ public class UserIO {
         health_Question = "How healthy are you feeling right now? Choose between healthy/don't care/unhealthy."; //2
         loc_Question = "Where are you closest to right now? Choose between Covel, Sproul, Hedrick, De Neve, Rieber, Campus."; //3
         takeOut_Question = "Are you fine with eating at takeout places? Yes/No/idc"; //4
-        welcome();
+        welcome2();
 
        	diningAlgorithm = new DiningAlgorithm(getMood(), getHealthLevel(), getLoc(), takeout());
     }
@@ -29,6 +30,13 @@ public class UserIO {
         sc.nextLine();
         System.out.println("Please answer the following questions to help us make the BEST decision for you :)");
         sc.nextLine();
+    }
+    
+    public void welcome2()
+    {
+    	JOptionPane.showMessageDialog(null,"Welcome to DiningDecisions!!(Click OK to continue)");
+    	JOptionPane.showMessageDialog(null,"We are here to help you make a decision on WHERE you should dine right now.");
+    	JOptionPane.showMessageDialog(null,"Please answer the following questions to help us make the BEST decision for you :)");
     }
     
     public int getMood()
