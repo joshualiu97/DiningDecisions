@@ -1,3 +1,4 @@
+package dining.decisions;
 import java.util.Date;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -81,7 +82,7 @@ public class Online{
             case 1 :
             case 7 :
                 if (diningName.equals(Constants.COVEL_NAME)){
-                    if ((currentTime >= 930 && currentTime < 1500) || (currentTime >= 1700 && currentTime < 900)) {
+                    if ((currentTime >= 930 && currentTime < 1500) || (currentTime >= 1700 && currentTime < 2100)) {
                         return true;
                     } else {
                         return false;
