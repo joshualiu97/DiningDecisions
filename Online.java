@@ -234,6 +234,7 @@ public class Online{
         if (diningName == Constants.FEAST_NAME) {
             return feast;
         }
+        return 0;
 	}
 
 	public String retrieveCurrentTime(){
@@ -260,7 +261,7 @@ public class Online{
         return day;
     }
 
-   public String getCurrentTime(){
+   public int getCurrentTime(){
    		return currentTime;
    }
 
@@ -269,8 +270,8 @@ public class Online{
 
    }
 
-   public String getCrowdLevel(){
-   		return crowdlevel;
+   public int getCrowdLevel(){
+   		return crowdLevel;
    }
 
 }
