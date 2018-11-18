@@ -2,7 +2,7 @@ public class DiningDecisions
 {
 	public static void main(String[] arg)
 	{
-		UserIO test = new UserIO();
+		UserIO3 test = new UserIO3();
 		test.printDiningHall();
 	}
 }
