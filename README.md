@@ -6,4 +6,6 @@ You're sitting in your dorm with a group of friends, and you mutually agree you'
 
 Dining Decisions is a program designed to take in the user's feelings, location, and health preferences to decide which UCLA dining hall is the best option.
 
+To run the code, compile and run DiningDecisions.java.
+
 A group project created by Isabel, Grace, Melody, and Joshua in 2018 at UCLA ACM Hack's HOTH V.
