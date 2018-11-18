@@ -3,9 +3,9 @@ import java.util.ArrayList;
 public class DiningAlgorithm
 {
 	//The amount of points added to the point total if dining hall is compatible
-	private static int MOOD_POINTS = 1;
-	private static int HEALTH_POINTS = 1;
-	private static int CROWD_POINTS = 1;
+	private static int MOOD_POINTS = 5;
+	private static int HEALTH_POINTS = 5;
+	private static int CROWD_POINTS = 8;
 
 	//Local variables
 	private int userMood;

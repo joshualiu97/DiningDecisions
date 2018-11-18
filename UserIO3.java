@@ -9,14 +9,14 @@ public class UserIO3 {
     private String takeOut_Question; 
     private Scanner sc;
 
-    private static ImageIcon rendeImage = new ImageIcon("Pictures/rendezvous.jpg");
-    private static ImageIcon bCafeImage = new ImageIcon("Pictures/bcafe.jpg");
-    private static ImageIcon cafe1919Image = new ImageIcon("Pictures/cafe1919.jpg");
-    private static ImageIcon covelImage = new ImageIcon("Pictures/covel.jpg");
-    private static ImageIcon bPlateImage = new ImageIcon("Pictures/bplate.jpg");
-    private static ImageIcon deneveImage = new ImageIcon("Pictures/deneve.jpg");
-    private static ImageIcon feastImage = new ImageIcon("Pictures/feast.jpg");
-    private static ImageIcon studyImage = new ImageIcon("Pictures/study.jpg");
+    private static ImageIcon rendeImage = new ImageIcon("rendezvous.jpg");
+    private static ImageIcon bCafeImage = new ImageIcon("bcafe.jpg");
+    private static ImageIcon cafe1919Image = new ImageIcon("cafe1919.jpg");
+    private static ImageIcon covelImage = new ImageIcon("covel.jpg");
+    private static ImageIcon bPlateImage = new ImageIcon("bplate.jpg");
+    private static ImageIcon deneveImage = new ImageIcon("deneve.jpg");
+    private static ImageIcon feastImage = new ImageIcon("feast.jpg");
+    private static ImageIcon studyImage = new ImageIcon("study.jpg");
 
     private DiningAlgorithm diningAlgorithm;
     
@@ -26,7 +26,7 @@ public class UserIO3 {
         mood_Question = "What mood are you in right now? Choose between happy/alright/meh/depressed."; //1
         health_Question = "How healthy are you feeling right now? Choose between healthy/don't care/unhealthy."; //2
         loc_Question = "Where are you closest to right now? Choose between Covel, Sproul, Hedrick, De Neve, Rieber, Campus."; //3
-        takeOut_Question = "Are you fine with eating at takeout places? Yes/No/idc"; //4
+        takeOut_Question = "Do you only want to eat take out? Yes/No(only dining hall)/idc"; //4
         welcome();
 
        	diningAlgorithm = new DiningAlgorithm(getMood(), getHealthLevel(), getLoc(), takeout());
