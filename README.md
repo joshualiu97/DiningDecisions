@@ -1,5 +1,3 @@
-HackTheHillV
-
 Dining Decisions
 ----------------
 You're sitting in your dorm with a group of friends, and you mutually agree you're all hungry. But, no one wants to decide on which dining hall to go to! How do you break through the stalemate?
